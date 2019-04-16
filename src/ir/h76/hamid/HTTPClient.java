@@ -18,7 +18,7 @@ import java.net.URL;
  * @author A.I
  */
 public class HTTPClient {
-    private final String API_KEY = "c43f2e366c4c5678d1ae92bb2d422aa757db20c0d5ea35dfb507b0e9ab97e8a0";
+    private final String API_KEY = "c43f2e366c4c5678d1ae92bb2d422aa757db20c0d5ea35dfb507b0e9ab97e8a0"; // limited request calls, replace with new API key for yourself :)
     private final String BASE_URL = "https://min-api.cryptocompare.com";
     private final String fullURL = BASE_URL + "/data/price?fsym=BTC&tsyms=USD&api_key=" + API_KEY;
     private double bitCoinPrice = 0.0;
