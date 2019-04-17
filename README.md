@@ -1,0 +1,3 @@
+# Fool Girlfriend - Bitcoin Counter
+From a story that one of my friends told me, I created this small software to calculate how foolish is that girlfirend :)
+Hope you guys enjoy from it...
