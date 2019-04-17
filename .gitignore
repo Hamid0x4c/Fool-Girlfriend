@@ -1,1 +1,6 @@
 *.class
+/dist/
+/test/
+/build/
+/nbproject/
+/store/

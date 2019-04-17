@@ -7,12 +7,15 @@ package ir.h76.hamid;
 import java.text.NumberFormat;
 import java.util.Timer;
 import java.util.TimerTask;
-import javax.swing.JLabel;
+import java.awt.*;
+import javax.swing.*;
+import sun.util.*;
+import sun.util.logging.resources.logging;
 /**
  *
  * @author A.I
  */
-public class Main extends javax.swing.JFrame {
+public class Main extends JFrame {
     Bitcoin bcPrice;
     int usdInT = 15000;
     int gfBitcoins = 30;
@@ -34,175 +37,172 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
            
         
-        panel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        bitCoinPriceText = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        bitCoinPriceLabel = new javax.swing.JLabel();
-        gfCountBitcoinText = new javax.swing.JLabel();
-        gfBitCoins = new javax.swing.JLabel();
-        gfFoolishText = new javax.swing.JLabel();
-        gfFoolishPrice = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        bitCoinPriceText1 = new javax.swing.JLabel();
-        usdInTooman = new javax.swing.JLabel();
+        panel = new JPanel();
+        jLabel1 = new JLabel();
+        jLabel2 = new JLabel();
+        bitCoinPriceText = new JLabel();
+        jSeparator1 = new JSeparator();
+        bitCoinPriceLabel = new JLabel();
+        gfCountBitcoinText = new JLabel();
+        gfBitCoins = new JLabel();
+        gfFoolishText = new JLabel();
+        gfFoolishPrice = new JLabel();
+        jLabel3 = new JLabel();
+        bitCoinPriceText1 = new JLabel();
+        usdInTooman = new JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        panel.setBackground(new java.awt.Color(255, 255, 255));
+        panel.setBackground(new Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(200, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setFont(new Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setForeground(new Color(200, 0, 0));
+        jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
         jLabel1.setText("پروژه‌ی محاسبه‌ی حماقت دوست‌دختر");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setFont(new Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
         jLabel2.setText("توجه: قیمت بیت‌کوین هر  ۲ ثانیه به روز می‌شود، اعداد واقعی هستند");
 
-        bitCoinPriceText.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bitCoinPriceText.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        bitCoinPriceText.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+        bitCoinPriceText.setHorizontalAlignment(SwingConstants.RIGHT);
         bitCoinPriceText.setText("قیمت هر بیت‌کوین در این لحظه به دلار آمریکا");
 
-        bitCoinPriceLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bitCoinPriceLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bitCoinPriceLabel.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+        bitCoinPriceLabel.setHorizontalAlignment(SwingConstants.CENTER);
         bitCoinPriceLabel.setText("Loading...");
 
-        gfCountBitcoinText.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        gfCountBitcoinText.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        gfCountBitcoinText.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+        gfCountBitcoinText.setHorizontalAlignment(SwingConstants.RIGHT);
         gfCountBitcoinText.setText("تعداد احتمالی بیت‌کوین‌های دوست‌دختر");
 
-        gfBitCoins.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        gfBitCoins.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        gfBitCoins.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+        gfBitCoins.setHorizontalAlignment(SwingConstants.CENTER);
         gfBitCoins.setText("30");
 
-        gfFoolishText.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        gfFoolishText.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        gfFoolishText.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+        gfFoolishText.setHorizontalAlignment(SwingConstants.RIGHT);
         gfFoolishText.setText("محاسبه‌ی هزینه‌ی حماقت دوست دختر در این لحظه");
 
-        gfFoolishPrice.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        gfFoolishPrice.setForeground(new java.awt.Color(255, 0, 0));
-        gfFoolishPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        gfFoolishPrice.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+        gfFoolishPrice.setForeground(new Color(255, 0, 0));
+        gfFoolishPrice.setHorizontalAlignment(SwingConstants.CENTER);
         gfFoolishPrice.setText("Loading...");
 
-        jLabel3.setForeground(new java.awt.Color(150, 150, 150));
+        jLabel3.setForeground(new Color(150, 150, 150));
         jLabel3.setText("Story From: tdvlpr | Idea, Design & Programming: Hamid0x4c");
 
-        bitCoinPriceText1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bitCoinPriceText1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        bitCoinPriceText1.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+        bitCoinPriceText1.setHorizontalAlignment(SwingConstants.RIGHT);
         bitCoinPriceText1.setText("قیمت دلار آمریکا به تومان - حدوداً");
 
-        usdInTooman.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        usdInTooman.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        usdInTooman.setFont(new Font("Tahoma", 0, 12)); // NOI18N
+        usdInTooman.setHorizontalAlignment(SwingConstants.CENTER);
         usdInTooman.setText(usdInT + "");
 
-        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
+        GroupLayout panelLayout = new GroupLayout(panel);
         panel.setLayout(panelLayout);
+        
+        // horizontal group
         panelLayout.setHorizontalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
+                    .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                         .addGap(0, 18, Short.MAX_VALUE)
-                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                             .addGroup(panelLayout.createSequentialGroup()
-                                .addComponent(gfFoolishPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(gfFoolishText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(gfFoolishPrice, GroupLayout.PREFERRED_SIZE, 272, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(gfFoolishText, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(panelLayout.createSequentialGroup()
-                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(bitCoinPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(usdInTooman, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(gfBitCoins, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                    .addComponent(bitCoinPriceLabel, GroupLayout.PREFERRED_SIZE, 272, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(usdInTooman, GroupLayout.PREFERRED_SIZE, 272, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gfBitCoins, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 272, GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                     .addGroup(panelLayout.createSequentialGroup()
                                         .addGap(44, 44, 44)
-                                        .addComponent(bitCoinPriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(bitCoinPriceText, GroupLayout.PREFERRED_SIZE, 229, GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(bitCoinPriceText1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(gfCountBitcoinText, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(bitCoinPriceText1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(gfCountBitcoinText, GroupLayout.PREFERRED_SIZE, 229, GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(panelLayout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
+                .addContainerGap()));
+        
+        // Vertical group
         panelLayout.setVerticalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bitCoinPriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(bitCoinPriceText, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
                     .addComponent(bitCoinPriceLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(usdInTooman)
-                    .addComponent(bitCoinPriceText1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bitCoinPriceText1, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(gfCountBitcoinText)
                     .addComponent(gfBitCoins))
                 .addGap(11, 11, 11)
-                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(gfFoolishText)
                     .addComponent(gfFoolishPrice))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
         
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        EventQueue.invokeLater(new Runnable() {
             public void run() {
                 HTTPClient client = new HTTPClient();                
                 Timer timer = new Timer();
@@ -239,18 +239,18 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify                     
-    private javax.swing.JLabel bitCoinPriceLabel;
-    private javax.swing.JLabel bitCoinPriceText;
-    private javax.swing.JLabel bitCoinPriceText1;
-    private javax.swing.JLabel gfBitCoins;
-    private javax.swing.JLabel gfCountBitcoinText;
-    private javax.swing.JLabel gfFoolishPrice;
-    private javax.swing.JLabel gfFoolishText;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JPanel panel;
-    private javax.swing.JLabel usdInTooman;
+    private JLabel bitCoinPriceLabel;
+    private JLabel bitCoinPriceText;
+    private JLabel bitCoinPriceText1;
+    private JLabel gfBitCoins;
+    private JLabel gfCountBitcoinText;
+    private JLabel gfFoolishPrice;
+    private JLabel gfFoolishText;
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JSeparator jSeparator1;
+    private JPanel panel;
+    private JLabel usdInTooman;
     // End of variables declaration                   
 }
